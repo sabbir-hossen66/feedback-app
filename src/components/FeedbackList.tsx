@@ -53,7 +53,7 @@ export default function FeedbackList({ refresh }: { refresh: number }) {
       <h2 className="text-lg font-semibold mb-3">All Feedback</h2>
 
       {currentItems.length === 0 ? (
-        <p className="text-primary">No feedback yet.</p>
+        <p className="text-primary text-2xl text-center">No feedback yet.</p>
       ) : (
         <ul className="space-y-3">
           {currentItems.map((fb) => (
