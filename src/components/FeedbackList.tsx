@@ -50,11 +50,11 @@ export default function FeedbackList({ refresh }: { refresh: number }) {
 
   return (
     <div className="mt-6 max-w-lg w-full">
-      <h2 className="text-lg font-semibold mb-3">All Feedback</h2>
-
       {currentItems.length === 0 ? (
         <p className="text-primary text-2xl text-center">No feedback yet.</p>
       ) : (
+        <>
+         <h2 className="text-lg font-semibold mb-3">All Feedback</h2>
         <ul className="space-y-3">
           {currentItems.map((fb) => (
             <li
@@ -67,6 +67,7 @@ export default function FeedbackList({ refresh }: { refresh: number }) {
             </li>
           ))}
         </ul>
+        </>
       )}
 
       <Pagination pageCount={pageCount} onPageChange={handlePageClick} />
