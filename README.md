@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Feedback App
 
-## Getting Started
+A modern **Feedback App** built with **Next.js (TypeScript)** and **React**, allowing users to submit feedback and view all submissions in a paginated list.  
 
-First, run the development server:
+**Live Demo:** [https://feedback-app-smoky-five.vercel.app/](https://feedback-app-smoky-five.vercel.app/)  
+**GitHub Repository:** [https://github.com/sabbir-hossen66/feedback-app](https://github.com/sabbir-hossen66/feedback-app)
+
+---
+
+## Features
+
+- Submit user feedback via a responsive **feedback form**.
+- View all submitted feedback in a **paginated list** using **react-paginate**.
+- Form validation handled by **react-hook-form**.
+- Responsive and clean UI built with **Tailwind CSS**.
+- Feedback data is fetched from a **Next.js API route** and cached in `localStorage`.
+- Loading indicator while fetching data with **react-spinners**.
+
+---
+
+## Tech Stack
+
+- **Frontend & Backend:** Next.js (TypeScript)  
+- **Form Handling:** react-hook-form  
+- **Pagination:** react-paginate  
+- **Styling:** Tailwind CSS  
+- **Loading Spinner:** react-spinners  
+- **Deployment:** Vercel  
+
+---
+
+## Installation
+
+1. Clone the repository:
 
 ```bash
+git clone https://github.com/sabbir-hossen66/feedback-app.git
+cd feedback-app
+npm install
+# or
+yarn install
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Usage
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Fill out the feedback form and submit your feedback.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The feedback will appear below the form in a paginated list.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Navigate between pages using the pagination controls.
