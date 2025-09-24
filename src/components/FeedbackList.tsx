@@ -59,11 +59,11 @@ export default function FeedbackList({ refresh }: { refresh: number }) {
           {currentItems.map((fb) => (
             <li
               key={fb.id}
-              className="p-4 border rounded-lg bg-gray-50 shadow-sm"
+              className="p-4 border border-primary rounded-lg bg-gray-50 shadow-sm"
             >
-              <p className="font-medium text-gray-800">{fb.name}</p>
-              <p className="text-sm text-gray-600">{fb.email}</p>
-              <p className="mt-2 text-gray-700">{fb.message}</p>
+              <p className="font-medium text-gray-800">Name: {fb.name}</p>
+              <p className="text-sm text-gray-600"><span className="font-medium">Email:</span> {fb.email}</p>
+              <p className="mt-2 text-gray-700"><span className="font-medium">Message:</span> {fb.message}</p>
             </li>
           ))}
         </ul>

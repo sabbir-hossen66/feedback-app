@@ -1,7 +1,7 @@
 "use client";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import ClipLoader from "react-spinners/ClipLoader"; // ✅ import spinner
+import ClipLoader from "react-spinners/ClipLoader";
 
 type FeedbackInputs = {
   name: string;
@@ -54,7 +54,7 @@ export default function FeedbackForm({ onSubmit }: { onSubmit: () => void }) {
         <input
           type="text"
           placeholder="Your Name"
-          className="w-full p-2 border rounded-lg"
+          className="w-full p-2 border rounded-lg border-[#AB3AE0] focus:outline-none focus:ring-2 focus:ring-[#AB3AE0]"
           {...register("name", { required: "Name is required" })}
         />
         {errors.name && (
@@ -66,7 +66,7 @@ export default function FeedbackForm({ onSubmit }: { onSubmit: () => void }) {
         <input
           type="email"
           placeholder="Your Email"
-          className="w-full p-2 border rounded-lg"
+          className="w-full p-2 border rounded-lg border-[#AB3AE0] focus:outline-none focus:ring-2 focus:ring-[#AB3AE0]"
           {...register("email", {
             required: "Email is required",
             pattern: {
@@ -84,7 +84,7 @@ export default function FeedbackForm({ onSubmit }: { onSubmit: () => void }) {
         <textarea
           placeholder="Your Feedback"
           rows={4}
-          className="w-full p-2 border rounded-lg"
+          className="w-full p-2 border rounded-lg border-[#AB3AE0] focus:outline-none focus:ring-2 focus:ring-[#AB3AE0]"
           {...register("message", { required: "Feedback is required" })}
         />
         {errors.message && (
@@ -95,7 +95,7 @@ export default function FeedbackForm({ onSubmit }: { onSubmit: () => void }) {
       <button
         type="submit"
         disabled={loading}
-        className="w-full flex items-center justify-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition disabled:opacity-70 cursor-pointer"
+        className="w-full flex items-center justify-center bg-primary text-white py-2 rounded-lg hover:bg-primary transition disabled:opacity-70 cursor-pointer"
       >
         {loading ? <ClipLoader size={20} color="#fff" /> : "Submit"}
       </button>
