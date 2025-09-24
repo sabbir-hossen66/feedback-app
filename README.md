@@ -34,18 +34,19 @@ A modern **Feedback App** built with **Next.js (TypeScript)** and **React**, all
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/sabbir-hossen66/feedback-app.git
+git clone https://github.com/sabbir-hossen66/feedback-app.git 
+```
+
+2.Navigate to the project directory:
+
+``` bash
 cd feedback-app
+```
+``` bash
 npm install
 # or
 yarn install
-npm run dev
-# or
-yarn dev
-Usage
-
-Fill out the feedback form and submit your feedback.
-
-The feedback will appear below the form in a paginated list.
-
-Navigate between pages using the pagination controls.
+```
+  ``` bash
+  npm run dev
+  ```
