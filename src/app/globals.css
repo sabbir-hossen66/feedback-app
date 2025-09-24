@@ -7,6 +7,15 @@
   background-color: #AB3AE0;
 }
 .bg-primary:hover {
-  background-color: #9228c7; /* slightly darker purple */
+  background-color: #9228c7; 
   transition: background-color 0.5s ease;
+}
+
+.text-primary {
+  color: #AB3AE0;
+}
+
+.text-primary:hover {
+  color: #9228c7;
+  transition: color 0.3s ease;
 }

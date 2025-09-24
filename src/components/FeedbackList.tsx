@@ -13,11 +13,11 @@ type Feedback = {
 
 export default function FeedbackList({ refresh }: { refresh: number }) {
   const [feedbacks, setFeedbacks] = useState<Feedback[]>([]);
-  const [loading, setLoading] = useState(true); // ✅ page loader
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     const fetchFeedbacks = async () => {
-      setLoading(true); // start loader
+      setLoading(true); 
       const res = await fetch("/api/feedback");
       const data = await res.json();
 
@@ -25,7 +25,7 @@ export default function FeedbackList({ refresh }: { refresh: number }) {
         setFeedbacks(data.feedbacks);
         localStorage.setItem("feedbacks", JSON.stringify(data.feedbacks));
       }
-      setLoading(false); // stop loader
+      setLoading(false);
     };
 
     fetchFeedbacks();
@@ -43,7 +43,7 @@ export default function FeedbackList({ refresh }: { refresh: number }) {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-64">
-        <ClipLoader size={40} color="#3b82f6" />
+        <ClipLoader size={40} color="#AB3AE0" />
       </div>
     );
   }
@@ -53,7 +53,7 @@ export default function FeedbackList({ refresh }: { refresh: number }) {
       <h2 className="text-lg font-semibold mb-3">All Feedback</h2>
 
       {currentItems.length === 0 ? (
-        <p className="text-gray-500">No feedback yet.</p>
+        <p className="text-primary">No feedback yet.</p>
       ) : (
         <ul className="space-y-3">
           {currentItems.map((fb) => (
